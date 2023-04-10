@@ -30,14 +30,14 @@
 
 .u-showtext--sp {
     display: none;
-    @include sp {
+    @include tab {
         display: inline-block;
     }
 }
 
 .u-showtext--pc {
     display: inline-block;
-    @include sp {
+    @include tab {
         display: none;
     }
 }
