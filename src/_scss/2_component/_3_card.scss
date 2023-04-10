@@ -1,0 +1,197 @@
+.c-card {
+    display: flex;
+    margin-top: 51px;
+
+    @include tab {
+        margin-top: 19px;
+    }
+
+    .c-card__box {
+        width: 56.44216691068814%;
+        position: relative;
+        @include tab {
+            width: calc(100% - 15px);
+            z-index: 0;
+        }
+    }
+
+    .c-card__img {
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        width: 100%;
+        height: 477px;
+        object-fit: cover;
+        @include tab {
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            height: 390px;
+        }
+        @include sp {
+            height: 224px;
+        }
+    }
+
+    .c-card__inner {
+        padding: 51px 60px 60px;
+        background-color: rgba(227, 223, 185, 0.9);
+        position: absolute;
+        width: 89.10505836575875%;
+        max-width: 687px;
+        right: 0;
+        top: 50%;
+        transform: translate(74.5%, -53.7%);
+        display: flex;
+        flex-direction: column;
+        @include mediumPc {
+            padding: 30px;
+            width: 100%;
+        }
+        @include tab {
+            position: relative;
+            transform: translate(0, 0);
+            top: -12px;
+            left: 15px;
+            z-index: -1;
+            width: 100%;
+            max-width: calc(100% - 15px);
+            padding: 29px 22px 30px;
+        }
+    }
+
+    .c-card__btn {
+        align-self: flex-end;
+        margin-top: 1.3em;
+
+        &::before {
+            background-color: rgb(124, 98, 27) !important;
+        }
+        @include tab {
+            margin-top: 1.6em;
+            margin-top: 1.5em;
+            letter-spacing: 0.05em;
+        }
+    }
+
+    .c-card__title {
+        font-size: 3rem;
+        font-weight: 700;
+        color: $text-green;
+        letter-spacing: 0.1em;
+        margin-bottom: 1.5em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        @include tab {
+            font-size: 2.4rem;
+            display: block;
+        }
+        @include sp {
+            font-size: 1.8rem;
+            text-align: center;
+            margin-bottom: 1em;
+            padding-left: 10px;
+        }
+    }
+
+    .c-card__desc {
+        font-size: 1.8rem;
+        font-family: $second-font;
+        color: #333;
+        font-size: 1.8rem;
+        font-feature-settings: "palt" 0;
+        line-height: 1.6;
+        letter-spacing: 0.05em;
+        font-weight: 400;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 7;
+        -webkit-box-orient: vertical;
+
+        &.c-card__desc--fixpr {
+            padding-right: 16px;
+        }
+        @include tab {
+            font-size: 1.6rem;
+            display: block;
+        }
+        @include sp {
+            font-size: 1.2rem;
+
+            &.c-card__desc--fixpr {
+                padding-right: 0;
+            }
+        }
+    }
+
+    &.c-card--reverse {
+        justify-content: flex-end;
+
+        .c-card__img {
+            border-radius: 0;
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+        }
+
+        .c-card__inner {
+            left: 0;
+            right: unset;
+            transform: translate(-74.5%, -53.7%);
+        }
+        @include tab {
+            .c-card__img {
+                border-top-left-radius: 15px;
+                border-bottom-left-radius: 15px;
+            }
+
+            .c-card__inner {
+                right: unset;
+                transform: translate(0, 0);
+            }
+        }
+    }
+
+    &.c-card--service {
+        .c-card__inner {
+            padding: 50px 60px 57px;
+            transform: translate(74.5%, -49%);
+            @include mediumPc {
+                padding: 30px;
+                width: 100%;
+            }
+            @include tab {
+                position: relative;
+                transform: translate(0, 0);
+                top: -12px;
+                left: 15px;
+                z-index: -1;
+                width: 100%;
+                max-width: calc(100% - 15px);
+                padding: 29px 22px 30px;
+            }
+            @include sp {
+                padding: 29px 15px 30px;
+            }
+        }
+
+        &.c-card--reverse {
+            .c-card__inner {
+                transform: translate(-74.5%, -49%);
+            }
+
+            @include tab {
+                .c-card__img {
+                    border-top-left-radius: 15px;
+                    border-bottom-left-radius: 15px;
+                }
+
+                .c-card__inner {
+                    right: unset;
+                    transform: translate(0, 0);
+                }
+            }
+        }
+    }
+}

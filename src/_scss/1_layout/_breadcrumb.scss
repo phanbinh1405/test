@@ -1,0 +1,36 @@
+/* Breadcrumb
+------------------------------------------------------------*/
+.c-breadcrumb {
+    width: 1260px;
+    max-width: 100%;
+    padding: 0 27px;
+    margin: 26px auto 0;
+    align-items: center;
+    @include sp {
+        padding: 0 15px;
+        flex-wrap: wrap;
+    }
+
+    .c-breadcrumb__item {
+        font-family: $second-font;
+        font-weight: 400;
+        color: #333;
+        font-size: 1.4rem;
+        letter-spacing: 0.04em;
+        font-feature-settings: "palt" 0;
+        @include sp {
+            font-size: 1.2rem;
+            margin-top: 5px;
+        }
+    }
+
+    .c-breadcrumb__icon {
+        font-size: 1.4rem;
+        color: #7c621b;
+        margin: 0 10px;
+        @include sp-375 {
+            margin: 0 5px;
+        };
+    }
+}
+

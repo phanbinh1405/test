@@ -1,0 +1,63 @@
+<section class="contact__form">
+    <div class="contact__info">
+        <div class="contact__infobox">
+            <h2 class="contact__title">お電話でのお問い合わせ</h2>
+            <p class="contact__phone u-flex">
+                <span class="contact__numb u-show--pc"><i class="fas fa-phone-alt contact__infoicon"></i>0120-581-056</span>
+                <a href="tel:0120-581-056" class="contact__numb u-show--sp"><i class="fas fa-phone-alt contact__infoicon"></i>0120-581-056</a>
+                <span class="contact__time">10:00~18:00 / 水曜日定休</span>
+            </p>
+        </div>
+    </div>
+    <p class="contact__note">※すべて入力必須項目となります。</p>
+    <form class="contact__formgroup" id="contact__form">
+        <div class="contact__field u-flex">
+            <label class="contact__label" for="name">お名前</label>
+            <input data-rules="required" class="contact__input" type="text" name="userName" id="name"
+                placeholder="大和 太郎">
+            <span class="contact__error"></span>
+        </div>
+        <div class="contact__field u-flex">
+            <label class="contact__label" for="furigana">ふりがな</label>
+            <input data-rules="required" class="contact__input" type="text" name="furigana" id="furigana"
+                placeholder="やまと たろう">
+            <span class="contact__error"></span>
+        </div>
+        <div class="contact__field u-flex">
+            <label class="contact__label" for="phone">電話番号</label>
+            <input data-rules="required|number|max:10" class="contact__input" type="text" name="phone" id="phone"
+                placeholder="09012345678">
+            <span class="contact__error"></span>
+        </div>
+        <div class="contact__field u-flex contact__email">
+            <label class="contact__label" for="email">メールアドレス</label>
+            <input data-rules="required|email" class="contact__input" type="text" name="email" id="email"
+                placeholder="yamato@example.com">
+            <span class="contact__error"></span>
+        </div>
+        <div class="contact__field u-flex">
+            <label class="contact__label" for="type">お問い合わせ種類</label>
+            <select data-rules="required" id="type" name="typeOfInquiry" class="contact__input contact__dropdown"
+                placeholder="選択してください">
+                <option hidden disabled selected value="">選択してください</option>
+                <option class="contact__option" value="type1">タイプ 1</option>
+                <option class="contact__option" value="type2">タイプ 2</option>
+                <option class="contact__option" value="type3">タイプ 3</option>
+            </select>
+            <span class="contact__error"></span>
+        </div>
+        <div class="contact__field u-flex">
+            <label class="contact__label" for="inquiry">お問い合わせ内容</label>
+            <textarea data-rules="required" rows="10" class="contact__input contact__inquiry" type="text" name="inquiry"
+                id="inquiry" placeholder="ここにお問い合わせ内容を入力してください"></textarea>
+            <span class="contact__error"></span>
+        </div>
+
+        <div class="contact__submit">
+            <button class="c-mainbtn contact__submitbtn">
+                <span class="c-mainbtn__text">確認する</span>
+                <i class="fas fa-chevron-right c-mainbtn__icon"></i>
+            </button>
+        </div>
+    </form>
+</section>

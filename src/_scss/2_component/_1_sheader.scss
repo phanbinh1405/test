@@ -1,0 +1,66 @@
+.c-sheader {
+    text-align: center;
+
+    .c-sheader__title {
+        font-size: 3.6rem;
+        font-weight: 600;
+        color: #333;
+        line-height: 1;
+        letter-spacing: 0.06em;
+        position: relative;
+        padding-bottom: 34px;
+
+        &::after {
+            position: absolute;
+            content: "";
+            height: 4px;
+            width: 80px;
+            background-color: rgb(124, 98, 27);
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+        @include tab {
+            font-size: 3rem;
+            line-height: 1.24;
+            padding-bottom: 20px;
+
+            &::after {
+                height: 3px;
+                width: 50px;
+                bottom: -1px;
+            }
+        }
+        @include sp {
+            font-size: 2.4rem;
+        }
+    }
+
+    .c-sheader__desc {
+        font-size: 1.8rem;
+        color: #333;
+        font-weight: 400;
+        line-height: 1.6;
+        letter-spacing: 0.05em;
+        font-family: $second-font;
+        max-width: 790px;
+        width: 100%;
+        margin: 42px auto 0;
+        font-feature-settings: "palt" 0;
+        @include tab {
+            margin: 21px auto 0;
+            font-size: 1.6rem;
+            text-align: center;
+            padding: 0 15px;
+            line-height: 2.34;
+            letter-spacing: 0.055em;
+        }
+        @include sp {
+            font-size: 1.2rem;
+            text-align: center;
+        }
+        @include sp-375 {
+            text-align: left;
+        }
+    }
+}

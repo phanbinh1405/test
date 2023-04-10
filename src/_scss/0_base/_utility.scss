@@ -1,0 +1,69 @@
+// Disable hover effect
+.u-hovernone:hover,
+.u-hovernone:hover img {
+    opacity: 1;
+    filter: alpha(opacity=1);
+}
+
+// Accent
+.u-accent {
+    color: #e3dfb9;
+}
+
+// Layout
+.u-flex {
+    display: flex;
+}
+
+// Text color
+.u-white {
+    color: #fff !important;
+}
+
+.u-whitedarker {
+    color: #f6faf5 !important;
+}
+
+// Line break
+.u-show--sp {
+    display: none;
+    @include tab {
+        display: block;
+    }
+}
+
+.u-showtext--sp {
+    display: none;
+    @include sp {
+        display: inline-block;
+    }
+}
+
+.u-showtext--pc {
+    display: inline-block;
+    @include sp {
+        display: none;
+    }
+}
+
+.u-show--tab {
+    display: none;
+    @include tab {
+        display: block;
+    }
+}
+
+.u-show--pc {
+    display: block;
+    @include tab {
+        display: none;
+    }
+}
+
+
+.u-show--pcntab {
+    display: block;
+    @include sp {
+        display: none;
+    }
+}

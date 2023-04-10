@@ -1,0 +1,224 @@
+.contact {
+    margin-top: 80px;
+    @include tab {
+        margin-top: 60px;
+    }
+
+    .contact__intro {
+        padding-top: 10px;
+    }
+
+    .contact__infobox {
+        max-width: 790px;
+        border: 2px solid rgb(124, 98, 27);
+        border-radius: 30px;
+        margin: 53px auto 0;
+        padding: 28px 30px 19px;
+        text-align: center;
+        @include sp {
+            width: fit-content;
+            margin-top: 37px;
+            border-radius: 15px;
+            padding: 15px;
+        }
+        @include sp-375 {
+            width: 100%;
+        }
+    }
+
+    .contact__title,
+    .contact__phone {
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: #333;
+    }
+
+    .contact__title {
+        line-height: 1;
+        letter-spacing: 0.1em;
+        @include sp-375 {
+            line-height: 1.5;
+        }
+    }
+
+    .contact__phone {
+        font-family: $second-font;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 423px;
+        width: 100%;
+        margin: 0.28em auto 0;
+        letter-spacing: 0.05em;
+        @include sp {
+            font-size: 1.8rem;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 0.5em;
+        }
+    }
+
+    .contact__infoicon {
+        padding-right: 6px;
+    }
+
+    .contact__time {
+        font-size: 1.6rem;
+        line-height: 2.9;
+        letter-spacing: 0.05em;
+        @include sp {
+            font-size: 1.4rem;
+        }
+    }
+
+    .contact__form {
+        max-width: 646px;
+        width: 100%;
+        padding: 0 30px;
+        margin: 0 auto 100px;
+
+        @include sp {
+            padding: 0 15px;
+            margin-bottom: 45px;
+        }
+
+        .contact__note {
+            font-size: 1.8rem;
+            font-family: $second-font;
+            color: #555;
+            font-weight: 400;
+            font-feature-settings: "palt" 0;
+            letter-spacing: 0.05em;
+            margin-top: 94px;
+            @include sp {
+                font-size: 1.4rem;
+                margin-top: 45px;
+            }
+        }
+
+        .contact__formgroup {
+            margin-top: 39px;
+        }
+
+        .contact__field {
+            flex-wrap: wrap;
+            margin-bottom: 43px;
+            position: relative;
+            @include sp {
+                margin-bottom: 35px;
+            }
+        }
+
+        .contact__label {
+            font-size: 1.8rem;
+            font-family: $second-font;
+            font-weight: 400;
+            color: $text-green;
+            width: 100%;
+            font-feature-settings: "palt" 0;
+            letter-spacing: 0.04em;
+            @include sp {
+                font-size: 1.4rem;
+            }
+        }
+
+        .contact__error {
+            position: absolute;
+            bottom: -1.9em;
+            left: 0;
+            font-family: $second-font;
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: #c50000;
+            letter-spacing: 0.08em;
+            @include sp {
+                font-size: 1.2rem;
+            }
+        }
+
+        .contact__input {
+            width: 100%;
+            border: 1px solid #7c621b;
+            border-radius: 8px;
+            background-color: rgb(255, 255, 255);
+            font-family: $second-font;
+            font-weight: 400;
+            padding: 10px 19px 11px;
+            margin-top: 16px;
+            letter-spacing: 0.05em;
+            appearance: none;
+            font-size: 1.8rem;
+            line-height: 1.5;
+
+            &::placeholder {
+                font-weight: 400;
+                color: rgb(153, 153, 153);
+                letter-spacing: 0.055em;
+            }
+            @include sp {
+                font-size: 1.4rem;
+                margin-top: 10px;
+                border-radius: 4px;
+            }
+        }
+
+        .contact__email {
+            margin-bottom: 44px;
+
+            .contact__input {
+                margin-top: 15px;
+            }
+            @include sp {
+                .contact__input {
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        .contact__dropdown {
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: #999;
+            letter-spacing: 0.05em;
+            background-image: url(./assets/img/dropdown.svg);
+            background-repeat: no-repeat;
+            background-position-x: 97.4%;
+            background-position-y: 51%;
+            background-size: 2.7%;
+
+            &.is-focus {
+                color: #000;
+            }
+        }
+
+        .contact__option {
+            color: #000;
+        }
+
+        .contact__inquiry {
+            padding-top: 11px;
+            padding-bottom: 18px;
+            resize: none;
+        }
+
+        .contact__submit {
+            max-width: 380px;
+            margin: 0 auto;
+            width: 100%;
+            padding-top: 37px;
+            @include sp {
+                padding-top: 0;
+            }
+        }
+
+        .contact__submitbtn {
+            border: none;
+            outline: none;
+            transition: all 0.3s;
+
+            &:hover {
+                cursor: pointer;
+                opacity: 0.7;
+            }
+        }
+    }
+}

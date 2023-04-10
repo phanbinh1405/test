@@ -1,0 +1,138 @@
+/*------------------------------------------------------------
+footer
+------------------------------------------------------------*/
+.c-footer {
+    .c-footer__top {
+        padding: 98px 0 100px;
+        background-color: rgb(0, 68, 66);
+        color: #fff;
+        @include tab {
+            padding: 45px 0 50px;
+        }
+    }
+
+    .c-footer__desc {
+        @include tab {
+            text-align: center !important;
+            margin-top: 24px !important;
+        }
+    }
+
+    .c-footer__btn {
+        column-gap: 30px;
+        max-width: 1260px;
+        margin: 46px auto 0;
+        width: 100%;
+        padding: 0 30px;
+
+        @include tab {
+            margin: 33px auto 0;
+            flex-direction: column;
+            padding: 0 15px;
+            max-width: 586px;
+        }
+        
+        @include sp {
+            max-width: 380px;
+        }
+    }
+
+    .c-footer__btnmail {
+        background-image: linear-gradient(to right,
+        rgb(174, 147, 74) 0%,
+        rgb(124, 122, 27) 100%);
+    }
+
+    .c-footer__btnphone {
+        background-image: linear-gradient(to right,
+        rgb(255, 255, 255) 0%,
+        rgb(227, 223, 185) 100%);
+        color: $text-green;
+
+        &.c-footer__btnphone--pc {
+            display: inline-flex;
+            @include tab {
+                display: none;
+            }
+        }
+
+        &.c-footer__btnphone--sp {
+            display: none;
+            @include tab {
+                display: inline-flex;
+            }
+        }
+        @include tab {
+            margin-top: 20px;
+        }
+    }
+
+    .c-footer__bot {
+        background-image: linear-gradient(to right,
+        rgb(174, 147, 74) 0%,
+        rgb(124, 122, 27) 100%);
+        align-items: center;
+        padding: 32px 30px 30px;
+        @include tab {
+            flex-direction: column;
+        }
+        @include sp {
+            padding: 17px 30px 30px;
+        }
+    }
+
+    .c-footer__logo {
+        flex: 1;
+        max-width: 228px;
+        @include tab {
+            max-width: 175px;
+        }
+    }
+
+    .c-footer__copy {
+        justify-self: flex-end;
+        flex: 1;
+        text-align: right;
+        font-size: 1.8rem;
+        font-family: $second-font;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        font-feature-settings: "palt" 0;
+        @include tab {
+            margin-top: 15px;
+            padding-left: 3px;
+        }
+        @include sp {
+            font-size: 0.9rem;
+        }
+    }
+
+    .c-footer__menu {
+        margin-left: 64px;
+
+        @include tab {
+            margin-left: 0;
+        }
+    }
+
+    .c-footer__link {
+        font-size: 1.8rem;
+        font-family: $second-font;
+        font-weight: 500;
+        display: inline-block;
+        margin-right: 27px;
+        letter-spacing: 0.04em;
+        font-feature-settings: "palt" 0;
+        @include tab {
+            margin-top: 18px;
+        }
+        @include sp {
+            font-size: 0.9rem;
+            margin-right: 12px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}

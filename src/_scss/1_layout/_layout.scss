@@ -1,0 +1,17 @@
+/* layout
+------------------------------------------------------------*/
+body {
+    font-family: $main-font;
+    line-height: 1.5;
+    font-feature-settings: "palt" 1;
+}
+//-------------------------------------------------------
+.l-container {
+    width: $base-width;
+    margin: 0 auto;
+}
+//-------------------------------------------------------
+
+.c-section {
+    padding: 96px 0;
+}

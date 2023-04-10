@@ -1,0 +1,78 @@
+.c-mainbtn {
+    min-height: 64px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.4rem;
+    font-family: $second-font;
+    color: #fff;
+    background-image: linear-gradient(to right,
+    rgb(0, 136, 112) 0%,
+    rgb(0, 53, 68) 100%);
+    border-radius: 32px;
+    font-weight: 700;
+    width: 100%;
+    position: relative;
+    @include tab {
+        font-size: 1.8rem;
+        min-height: 50px;
+    }
+    @include sp {
+        border-radius: 16px;
+        min-height: 32px;
+        font-size: 1.2rem;
+    }
+
+    .c-mainbtn__text {
+        letter-spacing: 0.06em;
+        font-feature-settings: "palt" 0;
+        display: flex;
+        align-items: center;
+        line-height: 2;
+    }
+
+    .c-mainbtn__icon {
+        color: #c9c393;
+        position: absolute;
+        right: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        &.c-mainbtn__icon--left {
+            right: unset;
+            left: 30px;
+        }
+
+        @include tab {
+            right: 16px;
+
+            &.c-mainbtn__icon--left {
+                right: unset;
+                left: 16px;
+            }
+        }
+    }
+
+    .c-mainbtn__txticon {
+        padding-right: 10px;
+        @include sp {
+            padding-right: 5px;
+        }
+    }
+
+    .c-mainbtn__phone {
+        letter-spacing: 0.05em;
+    }
+
+    .c-mainbtn__time {
+        font-size: 1.6rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        margin-left: 13px;
+        line-height: 3;
+        @include sp {
+            font-size: 0.9rem;
+            margin-left: 6px;
+        }
+    }
+}

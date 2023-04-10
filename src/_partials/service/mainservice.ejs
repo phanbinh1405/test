@@ -1,0 +1,76 @@
+<section class="service__main">
+    <div class="service__bg">
+        <div class="c-sheader">
+            <h2 class="c-sheader__title">主なサービス内容</h2>
+        </div>
+        <div class="service__content">
+            <% mainServices.forEach(item=> { %>
+                <div class="service__item u-flex">
+                    <div class="service__type u-flex">
+                        <p><%- item.type %></p>
+                    </div>
+                    <% if (typeof item.name !=='undefined' ) { %>
+                        <ul class="service__detail">
+                            <% item.name.forEach(name=> { %>
+                                <li class="service__name"><%- name %></li>
+                                <% }) %>
+                        </ul>
+                        <% } %>
+                </div>
+                <% }) %>
+                    <p class="service__note">規模・サービス内容によってお見積りを作成いたします</p>
+        </div>
+    </div>
+
+    <div class="service__list">
+        <div class="c-card c-card--service">
+            <div class="c-card__box">
+                <img class="c-card__img" src="./assets/img/service1.jpg" alt="管理会社＋αの付加価値">
+                <div class="c-card__inner">
+                    <a href="#">
+                        <h3 class="c-card__title">管理会社＋αの付加価値</h3>
+                        <p class="c-card__desc">
+                            当社では管理組合の運営アドバイスも行っており、管理組合様の状況を的確に把握した上で各種サポートをいたします。<br>
+                            ただ管理業務を行うのではなく、マンション管理組合様の状況を理解した上でオールマイティな視点でサポートを行い、管理組合様の負担軽減とスムーズな運営を縁の下で支えます。
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="c-card c-card--service c-card--reverse">
+            <div class="c-card__box">
+                <img class="c-card__img" src="./assets/img/service2.jpg" alt="大規模修繕工事のコンサルティングから施工も可能">
+                <div class="c-card__inner">
+                    <a href="#">
+                        <h3 class="c-card__title">大規模修繕工事の<br>コンサルティングから施工も可能</h3>
+                        <p class="c-card__desc">大規模修繕工事は当社が建設会社としても対応可能です。他社への相見積もりも可能で、透明性のある工事を提供します。<br>
+                            当社では自社施工体制により中間コスト等余計な費用を削減し、質の高い工事を価格を抑えて施工が可能です。その為、管理組合様の業務負担を減らし、更に管理組合様の財政状況にも貢献できます。
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="c-card c-card--service">
+            <div class="c-card__box">
+                <img class="c-card__img" src="./assets/img/service3.jpg" alt="自主管理の移行、現管理会社からの変更手続きもお手伝い">
+                <div class="c-card__inner">
+                    <a href="#">
+                        <h3 class="c-card__title">自主管理の移行、現管理会社からの<br>変更手続きもお手伝い</h3>
+                        <p class="c-card__desc">
+                            自主管理、他の管理会社に委託中の場合も、その変更手続きをお手伝いしますのでご安心いただけます。
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="service__back">
+        <div class="service__inner u-flex">
+            <a href="#" class="c-mainbtn">
+                <i class="fas fa-chevron-left c-mainbtn__icon c-mainbtn__icon--left"></i>
+                <span class="c-mainbtn__text">「やまとのマンション管理について」へ戻る</span>
+            </a>
+        </div>
+    </div>
+</section>

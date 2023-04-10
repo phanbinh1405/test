@@ -1,0 +1,225 @@
+.c-header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 999;
+
+    .c-header__item.active {
+        .c-header__link::before {
+            width: calc(100% - 2px);
+        }
+    }
+
+    .c-header__inner,
+    .c-header__nav,
+    .c-header__menu {
+        display: flex;
+        align-items: center;
+    }
+
+    .c-header__logo {
+        width: 22%;
+        margin-right: 20px;
+        @include tab {
+            width: 247px;
+        }
+    }
+
+    .c-header__nav {
+        flex-shrink: 0;
+        width: 83%;
+        max-width: 895px;
+        justify-content: space-between;
+        @include mediumPc {
+            width: 80%;
+        }
+        @include tab {
+            display: none;
+        }
+    }
+
+    .c-header__menu {
+        width: 72.5%;
+        justify-content: space-between;
+    }
+
+    .c-header__inner {
+        justify-content: space-between;
+        height: 80px;
+        background-color: rgb(255, 255, 255);
+        padding-left: 30px;
+
+        @include tab {
+            height: 60px;
+            padding-left: 15px;
+        }
+    }
+
+    .c-header__link {
+        font-family: $second-font;
+        font-size: 1.6rem;
+        color: #333;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        font-feature-settings: "palt" 0;
+        display: block;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "";
+            height: 4px;
+            background-color: rgb(124, 98, 27);
+            width: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+            bottom: -9px;
+            transition: width 0.3s ease-in-out;
+        }
+
+        &:hover {
+            &::before {
+                width: calc(100% - 2px);
+            }
+        }
+    }
+
+    .c-header__btn {
+        display: inline-flex;
+        align-items: center;
+        background-image: linear-gradient(to right,
+        rgb(0, 136, 112) 0%,
+        rgb(0, 53, 68) 100%);
+        height: 80px;
+        font-family: $second-font;
+        font-weight: 700;
+        font-size: 2rem;
+        color: #fff;
+        padding: 0 3.3%;
+        letter-spacing: 0.09em;
+        flex-shrink: 0;
+
+        &:hover {
+            color: #e3dfb9;
+
+            .c-header__btntext {
+                color: #e3dfb9;
+            }
+        }
+
+        &.active {
+            color: #e3dfb9;
+
+            .c-header__btntext {
+                color: #e3dfb9;
+            }
+        }
+    }
+
+    .c-header__icon {
+        transform: translateY(1px);
+    }
+
+    .c-header__btntext {
+        display: block;
+        padding-left: 8px;
+        transition: all 0.3s;
+    }
+
+    .c-header__toggle {
+        flex-shrink: 0;
+        display: none;
+        width: 60px;
+
+        &:hover {
+            cursor: pointer;
+            opacity: 0.7;
+        }
+
+        &.open {
+            .c-header__toggle--close {
+                display: block;
+            }
+
+            .c-header__toggle--open {
+                display: none;
+            }
+        }
+
+        .c-header__toggle--close {
+            display: none;
+        }
+
+        @include tab {
+            display: block;
+        }
+    }
+}
+
+.c-header__navsp {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: rgba($color: #fff, $alpha: 0.9);
+    overflow-y: auto;
+    height: 0;
+
+    &.open {
+        height: calc(100% - 60px);
+    }
+
+    .c-header__menusp {
+        padding-bottom: 40px;
+    }
+
+    .c-header__linksp,
+    .c-header__sublink {
+        font-size: 1.7rem;
+        font-family: $second-font;
+        font-weight: 700;
+        display: block;
+        text-align: center;
+        padding: 15px;
+        letter-spacing: 0.05em;
+        font-feature-settings: "palt" 0;
+        @include sp {
+            font-size: 1.5rem;
+        }
+
+        &:hover {
+            border-color: rgb(0, 68, 66);
+            background-color: rgb(0, 68, 66);
+            color: #fff;
+        }
+    }
+
+    .c-header__sublink {
+        font-weight: 400;
+        border-top: 0.15rem solid rgb(227, 223, 185);
+        padding: 13px;
+
+        &.c-header__sublink--medium {
+            font-weight: 500;
+        }
+    }
+
+    .c-header__linksp {
+        border-top: 0.15rem solid rgb(124, 98, 27);
+    }
+
+    .c-header__itemsp {
+        color: #333;
+
+        &:last-child {
+            border-bottom: 0.15rem solid rgb(124, 98, 27);
+        }
+
+        &.active {
+            background-color: rgb(0, 68, 66);
+            border-color: rgb(0, 68, 66);
+            color: #fff;
+        }
+    }
+}

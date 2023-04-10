@@ -1,0 +1,90 @@
+<header class="c-header">
+  <div class="c-header__inner">
+    <div class="c-header__logo">
+      <a href="<%= BASE_URL %>index.html">
+        <picture>
+          <source media="(max-width: 1024px)" srcset="./assets/img/logo-sp.png">
+          <img src="./assets/img/logo.png" alt="Logo">
+        </picture>
+      </a>
+    </div>
+    <nav class="c-header__nav">
+      <ul class="c-header__menu">
+        <% if (typeof linklists !='undefined' ) { %>
+          <% linklists.main && linklists.main.forEach(link=> { %>
+            <li class="c-header__item">
+              <a class="c-header__link u-hovernone" href=".<%= link.url %>">
+                <%= link.title %>
+              </a>
+            </li>
+            <% }) %>
+              <% } %>
+      </ul>
+      <a href="./contact.html" class="c-header__btn u-hovernone">
+        <i class="fas fa-envelope c-header__icon"></i>
+        <span class="c-header__btntext">お問い合わせ</span>
+      </a>
+    </nav>
+    <div class="c-header__toggle">
+      <img class="c-header__toggle--open" src="./assets/img/hamburger-open.png" alt="menu open icon">
+      <img class="c-header__toggle--close" src="./assets/img/hamburger-close.png" alt="menu close icon">
+    </div>
+
+    <nav class="c-header__navsp">
+      <ul class="c-header__menusp">
+          <li class="c-header__itemsp">
+            <a href="#" class="c-header__linksp">やまとのマンション管理について</a>
+            <ul class="c-header__submenu">
+              <li class="c-header__subitem">
+                <a href="#" class="c-header__sublink c-header__sublink--medium u-hovernone">修繕工事</a>
+              </li>
+              <li class="c-header__subitem">
+                <a href="#" class="c-header__sublink c-header__sublink--medium u-hovernone">理事長代行・管理組合アドバイス</a>
+              </li>
+              <li class="c-header__subitem">
+                <a href="#" class="c-header__sublink c-header__sublink--medium u-hovernone">マンション管理業務</a>
+              </li>
+            </ul>
+          </li>
+          <li class="c-header__itemsp">
+            <a href="#" class="c-header__linksp">マンション修繕工事について</a>
+            <ul class="c-header__submenu">
+              <li class="c-header__subitem">
+                <a href="#" class="c-header__sublink u-hovernone">大規模修繕について</a>
+              </li>
+              <li class="c-header__subitem">
+                <a href="#" class="c-header__sublink u-hovernone">屋上防水工事</a>
+              </li>
+              <li class="c-header__subitem">
+                <a href="#" class="c-header__sublink u-hovernone">外壁塗装工事</a>
+              </li>
+              <li class="c-header__subitem">
+                <a href="#" class="c-header__sublink u-hovernone">設備・部分的修繕</a>
+              </li>
+            </ul>
+          </li>
+          <li class="c-header__itemsp">
+            <a href="#" class="c-header__linksp u-hovernone">施工事例</a>
+          </li>
+          <li class="c-header__itemsp">
+            <a href="#" class="c-header__linksp u-hovernone">やまとのマンション管理コラム</a>
+          </li>
+          <li class="c-header__itemsp">
+            <a href="#" class="c-header__linksp u-hovernone">よくあるご質問</a>
+          </li>
+          <li class="c-header__itemsp">
+            <a href="./contact.html" class="c-header__linksp u-hovernone">お問い合わせ</a>
+          </li>
+          <li class="c-header__itemsp">
+            <a href="#" class="c-header__linksp u-hovernone">会社概要</a>
+          </li>
+          <li class="c-header__itemsp">
+            <a href="#" class="c-header__linksp u-hovernone">プライバシーポリシー</a>
+          </li>
+          <li class="c-header__itemsp">
+            <a href="#" class="c-header__linksp u-hovernone">サイトマップ</a>
+          </li>
+      </ul>
+    </nav>
+  </div>
+</header>

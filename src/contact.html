@@ -1,0 +1,37 @@
+<%- include('_layouts/layout', {
+    title: 'Contact page'
+}); -%>
+
+<!-- @meta -->
+<meta name="description" content="Contact page">
+<!-- @@meta -->
+
+<!-- @content -->
+    <main class="contact">
+       <section class="c-hero">
+            <div class="c-hero__inner">
+                <img class="c-hero__img" src="./assets/img/contact-bg.jpg" alt="お問い合わせ">
+                <div class="c-hero__content">
+                    <h1 class="c-hero__title">お問い合わせ</h1>
+                </div>
+            </div>
+       </section>
+
+    <section class="c-breadcrumb u-flex">
+        <a href="./index.html" class="c-breadcrumb__item">トップページ</a>
+        <p class="c-breadcrumb__icon"><i class="fas fa-caret-right"></i></p>
+        <p class="c-breadcrumb__item">お問い合わせ</p>
+    </section>
+
+    <section class="contact__intro">
+        <div class="c-sheader">
+            <p class="c-sheader__desc">ご質問やご相談は、お電話または下記お問い合わせフォームにてお寄せください。<br>
+                後日、担当者よりご連絡させていただきます。<br>
+                よくご質問いただく内容については<br>
+                「よくあるご質問」に掲載しておりますので、ご覧ください。
+            </p>
+        </div>
+    </section>
+    <%- include('_partials/form') %>
+    </main>
+<!-- @@content -->

@@ -1,0 +1,159 @@
+.service {
+    margin-top: 80px;
+
+    .service__business {
+        padding: 94px 0 96px;
+        @include tab {
+            padding: 45px 0;
+        }
+    }
+
+
+    .service__bg {
+        padding-top: 99px;
+        background-color: rgb(246, 250, 245);
+        @include tab {
+            padding-top: 45px;
+        }
+    }
+
+    .service__content {
+        max-width: 1056px;
+        padding: 0 30px 97px;
+        width: 100%;
+        margin: 60px auto 0;
+        @include sp {
+            margin-top: 45px;
+            padding: 0 15px 45px;
+        }
+    }
+
+    .service__item {
+        max-width: 996px;
+        @include sp {
+            flex-direction: column;
+        }
+    }
+
+    .service__type {
+        width: 27.8%;
+        background-color: rgb(0, 68, 66);
+        font-size: 2.4rem;
+        color: #e3dfb9;
+        font-weight: 700;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        letter-spacing: 0.09em;
+        border: 4px solid rgb(246, 250, 245);
+        padding: 15px;
+        @include sp {
+            width: 100%;
+            justify-content: flex-start;
+            padding: 5px 15px;
+            font-size: 2rem;
+        }
+    }
+
+    .service__detail {
+        border: 4px solid rgb(246, 250, 245);
+        background-color: rgb(255, 255, 255);
+        padding: 30px 55px;
+        flex: 1;
+
+        &.service__detail--fixpp {
+            padding: 32px 55px;
+        }
+        @include tab {
+            padding: 30px;
+
+            &.service__detail--fixpp {
+                padding: 30px;
+            }
+        }
+        @include sp {
+            padding: 15px 30px;
+        }
+    }
+
+    .service__break {
+        display: block;
+        @include sp {
+            display: none;
+        }
+    }
+
+    .service__name {
+        font-size: 1.8rem;
+        font-family: $second-font;
+        color: #333;
+        font-weight: 400;
+        line-height: 1.61;
+        letter-spacing: 0.05em;
+        font-feature-settings: "palt" 0;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "・";
+            left: 0;
+            top: 0;
+            transform: translate(-100%, 0);
+            font-family: $second-font;
+            font-size: 1.8rem;
+            color: #333;
+        }
+        @include sp {
+            font-size: 1.4rem;
+        }
+    }
+
+    .service__note {
+        text-align: center;
+        font-size: 1.8rem;
+        font-family: $second-font;
+        color: #333;
+        letter-spacing: 0.06em;
+        margin-top: 65px;
+        padding-left: 7px;
+        font-feature-settings: "palt" 0;
+        @include tab {
+            margin-top: 45px;
+        }
+    }
+
+
+    .service__list {
+        padding: 49px 0 98px;
+        @include tab {
+            padding-top: 30px;
+            padding-bottom: 45px;
+        }
+    }
+
+    .service__back {
+        background: url(./assets/img/service4.jpg);
+        min-height: 300px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+
+    .service__inner {
+        width: 850px;
+        max-width: 100%;
+        padding: 0 30px;
+        position: absolute;
+        left: 50%;
+        top: 52%;
+        transform: translate(-50%, -50%);
+        @include tab {
+            width: 586px;
+        }
+        @include sp {
+            width: 450px;
+            padding: 0 15px;
+        }
+    }
+}
