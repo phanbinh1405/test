@@ -12,9 +12,11 @@ footer
     }
 
     .c-footer__desc {
+        color: #f6faf5 !important;
         @include tab {
             text-align: center !important;
             margin-top: 24px !important;
+            color: #fff !important;
         }
     }
 
@@ -34,6 +36,9 @@ footer
         
         @include sp {
             max-width: 380px;
+        }
+        @include sp-375 {
+            max-width: 322px;
         }
     }
 
@@ -77,7 +82,7 @@ footer
             flex-direction: column;
         }
         @include sp {
-            padding: 17px 30px 30px;
+            padding: 17px 30px 14px;
         }
     }
 

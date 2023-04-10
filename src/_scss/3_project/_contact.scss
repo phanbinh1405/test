@@ -8,6 +8,10 @@
         padding-top: 10px;
     }
 
+    .contact__info {
+        padding: 0 15px;
+    }
+
     .contact__infobox {
         max-width: 790px;
         border: 2px solid rgb(124, 98, 27);
@@ -71,16 +75,6 @@
     }
 
     .contact__form {
-        max-width: 646px;
-        width: 100%;
-        padding: 0 30px;
-        margin: 0 auto 100px;
-
-        @include sp {
-            padding: 0 15px;
-            margin-bottom: 45px;
-        }
-
         .contact__note {
             font-size: 1.8rem;
             font-family: $second-font;
@@ -88,15 +82,26 @@
             font-weight: 400;
             font-feature-settings: "palt" 0;
             letter-spacing: 0.05em;
-            margin-top: 94px;
+            margin: 94px auto 0;
+            max-width: 646px;
+            padding: 0 30px;
+
             @include sp {
                 font-size: 1.4rem;
-                margin-top: 45px;
+                margin-top: 37px;
             }
         }
 
         .contact__formgroup {
-            margin-top: 39px;
+            max-width: 646px;
+            width: 100%;
+            padding: 0 30px;
+            margin: 39px auto 100px;
+            @include sp {
+                padding: 0 15px;
+                margin-bottom: 40px;
+                margin-top: 37px;
+            }
         }
 
         .contact__field {

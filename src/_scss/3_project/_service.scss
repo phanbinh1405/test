@@ -6,6 +6,9 @@
         @include tab {
             padding: 45px 0;
         }
+        @include sp {
+            padding: 40px 0;
+        }
     }
 
 
@@ -15,6 +18,9 @@
         @include tab {
             padding-top: 45px;
         }
+        @include sp {
+            padding-top: 40px;
+        }
     }
 
     .service__content {
@@ -22,9 +28,13 @@
         padding: 0 30px 97px;
         width: 100%;
         margin: 60px auto 0;
-        @include sp {
+        @include tab {
             margin-top: 45px;
             padding: 0 15px 45px;
+        }
+        @include sp {
+            margin-top: 40px;
+            padding: 0 15px 40px;
         }
     }
 
@@ -47,11 +57,14 @@
         letter-spacing: 0.09em;
         border: 4px solid rgb(246, 250, 245);
         padding: 15px;
+        @include tab {
+            font-size: 2rem;
+        }
         @include sp {
             width: 100%;
             justify-content: flex-start;
             padding: 5px 15px;
-            font-size: 2rem;
+            font-size: 1.8rem;
         }
     }
 
@@ -72,7 +85,7 @@
             }
         }
         @include sp {
-            padding: 15px 30px;
+            padding: 15px 25px;
         }
     }
 
@@ -103,6 +116,9 @@
             font-size: 1.8rem;
             color: #333;
         }
+        @include tab {
+            font-size: 1.6rem;
+        }
         @include sp {
             font-size: 1.4rem;
         }
@@ -118,7 +134,12 @@
         padding-left: 7px;
         font-feature-settings: "palt" 0;
         @include tab {
+            font-size: 1.6rem;
             margin-top: 45px;
+        }
+        @include sp {
+            font-size: 1.4rem;
+            margin-top: 40px;
         }
     }
 
@@ -128,6 +149,10 @@
         @include tab {
             padding-top: 30px;
             padding-bottom: 45px;
+        }
+        @include sp {
+            padding-top: 21px;
+            padding-bottom: 40px;
         }
     }
 
